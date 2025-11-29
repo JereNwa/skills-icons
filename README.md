@@ -17,6 +17,8 @@ Showcase your tech stack with clean, customizable icons, just list the technolog
 - 🇹🇷 [Türkçe (Turkish)](./i18n/tr/README.md)
 - 🇵🇹 [Português (Portuguese)](./i18n/pt/README.md)
 - 🇩🇪 [Deutsch (German)](./i18n/de/README.md)
+- 🇰🇷 [한국어 (Korean)](./i18n/ko/README.md)
+- 🇮🇳 [हिन्दी (Hindi)](./i18n/hin/README.md)
 
 > [!IMPORTANT]
 > We'd really appreciate it if you would consider starring our repository! It helps us gain visibility and support the project.
@@ -34,11 +36,17 @@ Showcase your tech stack with clean, customizable icons, just list the technolog
 
 ### Configuration Options 🛠️
 
-| Parameter | Description                                      | Required | Default |
-|-----------|--------------------------------------------------|----------|---------|
-| `i`       | Comma-separated list of icon names               | Yes      | /       |
-| `perline` | Number of icons per line                         | No       | 15      |
-| `radius`  | Icon(s) corner radius (value between 25 and 85)  | No       | 40      |
+| Parameter | Description                                     | Required | Default |
+| --------- | ----------------------------------------------- | -------- | ------- |
+| `i`       | Comma-separated list of icon names              | Yes      | /       |
+| `perline` | Number of icons per line                        | No       | 15      |
+| `radius`  | Icon(s) corner radius (value between 25 and 85) | No       | 40      |
+
+### Dark & Light Mode 🌗
+
+`Skills Icons` now supports automatic theme detection — icons will seamlessly adapt to your system’s dark 🌙 or light ☀️ mode without any parameters or manual setup.
+
+This behavior is powered by `CSS` built-in media query `prefers-color-scheme`, which detects the user’s current theme preference and adjusts the SVG colors accordingly.
 
 ### Available Icons 🎨
 
@@ -76,13 +84,16 @@ This section provides instructions on building and running the `Skills Icons` pr
 #### Prerequisites
 
 Before you begin, ensure you have the following installed:
+
 - Docker (version 18.09 or higher)
 
 #### Building the Docker Image
 
 To build the Docker image for `Skills Icons`, follow these steps:
+
 1. Open a terminal and navigate to the directory.
 2. Run the following command to build the image:
+
 ```bash
 docker build -t skills-icons .
 # or
@@ -92,7 +103,9 @@ sudo docker build -t skills-icons .
 #### Running the Docker Container
 
 Once the image is built, you can run it in a container:
+
 1. Execute the following command:
+
 ```bash
 docker run -p 3000:3000 skills-icons
 # or
